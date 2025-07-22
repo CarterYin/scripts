@@ -70,13 +70,13 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/s
 
 检测打补丁成功，可以使用：`cd ~/.vscode-server/bin/commit-id/ ldd node`  指令来查看，commit-id需要自己去查看，不能直接复制粘贴本命令。
 
-commit-id 的查看命令是：ls -l ~/.vscode-server/bin/
+commit-id 的查看命令是：`ls -l ~/.vscode-server/bin/`
 
 你将会看到类似下面的输出：
 
-total 4
+`total 4`
 
-drwxrwx--- 6 yinchao yinchao 4096 Jul 22 08:05 441438abd1ac652551dbe4d408dfcec8a499b8bf
+`drwxrwx--- 6 yinchao yinchao 4096 Jul 22 08:05 441438abd1ac652551dbe4d408dfcec8a499b8bf`
 
 若如下方显示，则为打补丁成功，（因为现在尚未触发，所以会提示2.27版本不匹配的问题）：
 ![](./images/ldd_node.jpg)
