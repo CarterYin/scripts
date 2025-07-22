@@ -7,7 +7,7 @@
 ### 功能介绍
 这个脚本用于在Linux环境中自动安装Anaconda3，特别适用于怀柔节点服务器。脚本会：
 - 自动下载最新版本的Anaconda（Linux 64位）
-- 在/data1/username目录下安装Anaconda3
+- 在$HOME目录下安装Anaconda3
 - 配置必要的环境变量
 - 初始化conda环境
 - 提供选项处理SSL证书验证问题
