@@ -53,6 +53,16 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/s
 ```
 
 2、执行setup_vscode_patch.sh脚本
+原来作者的脚本在我(CarterYin)运行的时候，出现了无法创建脚本文件等问题，这里给出一个解决方案，运行以下命令：
+```bash
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+```
+
+- mkdir -p ~/.ssh：如果 ~/.ssh 目录不存在，此命令会创建它。-p 选项确保即使父目录（这里指 ~，您的主目录）不存在，也会一并创建（不过通常主目录是存在的）。
+
+- chmod 700 ~/.ssh：设置 .ssh 目录的权限为 700。这意味着只有您的用户 (yinchao) 拥有对该目录的完全权限（读、写、执行），其他任何用户都没有权限访问。
+
 ```bash 
 wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/setup_vscode_patch.sh | bash
 ```
