@@ -26,10 +26,10 @@ INSTALL_PATH="/home/$USERNAME"
 # 创建安装目录和临时目录（如果不存在）
 print_progress "创建安装目录..."
 mkdir -p $INSTALL_PATH
-mkdir -p /home/tmp
+mkdir -p /home/$USERNAME/tmp
 
 # 检查Anaconda安装文件是否已经存在
-ANACONDA_INSTALLER="/home/tmp/anaconda.sh"
+ANACONDA_INSTALLER="/home/$USERNAME/tmp/anaconda.sh"
 if [ -f "$ANACONDA_INSTALLER" ]; then
     print_progress "检测到Anaconda安装文件已存在，跳过下载步骤..."
 else
