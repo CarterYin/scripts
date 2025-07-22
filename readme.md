@@ -58,7 +58,7 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/s
 ```
 安装完毕后，打补丁脚本不会自动触发，需要通过连接ssh的时候来触发这个打补丁。所以第四步需要重启vscode两次。
 
-检测打补丁成功，可以使用：`ldd ~/.vscode-server/bin/${commit-id}/node`  指令来查看，commit-id需要自己去查看，不能直接复制粘贴本命令。
+检测打补丁成功，可以使用：`~/.vscode-server/bin/commit-id$ ldd node`  指令来查看，commit-id需要自己去查看，不能直接复制粘贴本命令。
 
 commit-id 的查看命令是：ls -l ~/.vscode-server/bin/
 
