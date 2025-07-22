@@ -11,11 +11,12 @@
 - 配置必要的环境变量
 - 初始化conda环境
 - 提供选项处理SSL证书验证问题
+- 这是由CarterYin（笔者）修改的版本，针对没有sudo权限（无法新建原来脚本中的data1文件夹等）的同志。
 
 ### 使用方法
 登录到怀柔节点，然后直接执行仓库根目录下的setup_anaconda.sh
 ```bash
-wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/setup_anaconda.sh | bash
+wget --no-check-certificate -O - https://raw.githubusercontent.com/CarterYin/scripts/refs/heads/master/setup_anaconda.sh | bash
 ```
 
 ## setup_ollama.sh
@@ -57,7 +58,15 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/s
 ```
 安装完毕后，打补丁脚本不会自动触发，需要通过连接ssh的时候来触发这个打补丁。所以第四步需要重启vscode两次。
 
-检测打补丁成功，可以使用：`ldd ~/.code-server/bin/${commit-id}/node`  指令来查看，commit-id需要自己去查看，不能直接复制粘贴本命令。
+检测打补丁成功，可以使用：`ldd ~/.vscode-server/bin/${commit-id}/node`  指令来查看，commit-id需要自己去查看，不能直接复制粘贴本命令。
+
+commit-id 的查看命令是：ls -l ~/.vscode-server/bin/
+
+你将会看到类似下面的输出：
+
+total 4
+
+drwxrwx--- 6 yinchao yinchao 4096 Jul 22 08:05 441438abd1ac652551dbe4d408dfcec8a499b8bf
 
 若如下方显示，则为打补丁成功，（因为现在尚未触发，所以会提示2.27版本不匹配的问题）：
 ![](./images/ldd_node.jpg)
