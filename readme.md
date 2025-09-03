@@ -216,3 +216,7 @@ commit-id 的查看命令是：`ls -l ~/.vscode-server/bin/`
 
 ### 注意事项
 - setup_vscode_patch.sh依赖于先安装anaconda
+
+
+## 2025.9.3关于Windows服务器连接的问题
+
